@@ -1,0 +1,63 @@
+{% extends "index.html" %}
+
+{% block content %}
+<main class="mt-12 max-w-sm md:max-w-md lg:max-w-3xl mx-auto">
+    
+    <!-- HEADER -->
+    <div class="text-white flex items-center justify-between text-xl">
+        <a href="dashboard">&leftarrow; Back</a>
+        <h1>Create a new post</h1>
+    </div>
+
+    <!-- POSTING FORM -->
+    <div class="py-12">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class=" overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="p-6 border-b ">
+                    <form method="POST" action="">
+                        <div class="mb-4">
+                            <label class="text-xl text-white">Title</span></label></br>
+                            <input type="text" class=" p-2 w-full bg-slate-700 text-white" name="title" id="title" value="" required>
+                        </div>
+
+                     
+
+                        <div class="mb-4">
+                            <label class="text-xl text-white">Description</label></br>
+                            <input type="text" class=" p-6 w-full bg-slate-700 text-white" name="description" id="description"  required>
+                        </div>
+
+
+                        <div class="mb-8">
+                            <label class="text-xl text-white">Body</span></label></br>
+                            <textarea name="content"  ></textarea>
+                        </div>
+
+                        <div class="my-8">
+                            <label for="" class="text-white text-xl ">Image</label>
+                            <span class="text-white">
+                               <input type="file">
+                            </span> 
+                        </div>
+
+                        <div class="p-1">
+                            <div class="text-white mb-4">
+                                <input type="checkbox" >
+                                <label for="">Published</label>
+                  
+                            </div>
+                            <button role="submit" class="p-3 bg-[#83A3B8] text-white hover:bg-[#83A3C4]" required>Create Post</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>
+
+<script>
+    CKEDITOR.replace( 'content' );
+</script>
+</main>
+{% endblock %}
