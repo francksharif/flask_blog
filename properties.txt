@@ -1,0 +1,16 @@
+##### Website Pages ########
+- Admin Page to publish, modify and delete Posts
+- Main Page to show Posts 
+- About me Page to show information about me and my experience
+- Contact Page to link with me
+
+######## Models ########
+- Admin (CRUD on Posts)
+- Post ( Publish date, Title, Description/Subtitle, Content)
+- Blog (Posts List)
+
+
+
+
+############# tailwind run
+npx tailwindcss -i ./static/src/input.css -o ./static/dist/output.css --watch
